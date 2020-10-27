@@ -1,0 +1,3 @@
+Juan Pablo;Pepe;jprpepe@herrera.unt.edu.ar;1982-9-18
+Myriam;Ruíz;mruiz@herrera.unt.edu.ar;1979-12-29
+Prueba;Cumpleañero;prueba@laboratorio.com;1990-10-21

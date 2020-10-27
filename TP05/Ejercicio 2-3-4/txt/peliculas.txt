@@ -1,0 +1,3 @@
+sadd;accion;2020-10-03;No;Logo-min.jpg
+Pollitos en fuga;comedia;2001-02-21;No;Pollitos en fuga.jpg
+Los Vengadores;accion;2013-09-21;Destacado;Vengadores.jpg

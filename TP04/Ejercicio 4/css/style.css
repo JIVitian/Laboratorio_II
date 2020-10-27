@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    /*Para que no se modifique el tamaño de los
+    bloques al agregar uno dentro del otro*/
+    box-sizing: border-box;
+}
+
+body,main,section,article {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    background-color: lightgrey;
+}
+
+form {
+    margin: 20px;
+    width: 20vw;
+    height: 45vh;
+    background-color: white;
+    border: thin solid grey;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 2px 2px 1px 0 grey;
+}
+
+legend {
+    width: 90%;
+    font-weight: bolder;
+    color: red;
+    text-align: start;
+}
+
+input {
+    width: 90%;
+    height: 2.5em;
+    border-bottom: thin solid red;
+    /*Outline none para que no me aparezcan los
+    bordes al clickear en los campos de texto*/
+    outline: none;
+}
+
+#boton {
+    width: 50%;
+    height: 7.5vh;
+    border: thin solid red;
+    color: red;
+    background-color: white;
+}
+
+#boton:hover {
+    background-color: red;
+    color: white;
+}

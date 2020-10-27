@@ -1,0 +1,30 @@
+* {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+article {
+    width: 100vw;
+    height: 40vh;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+form {
+    width: 15vw; 
+    height: 25vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-evenly; 
+    align-items: center;
+}
+
+input {
+    width: 10vw;
+    height: 1.8em;
+    border: thin solid black;
+}

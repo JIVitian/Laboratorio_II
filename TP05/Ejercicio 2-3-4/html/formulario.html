@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--MetaTags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jorge Iván, Vitian">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+
+    <!--FavIcon-->
+    <link rel="shortcut icon" href="../img/estrella.png" type="image/x-icon">
+
+    <!--Titulo-->
+    <title>PiraPelis.com</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" style="color: white;">
+            <a class="navbar-brand" href="#">PiraPelis.com</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.php">Lista Peliculas<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../php/destacadas.php">Destacadas</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Alta Pelicula</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Ingresar</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <article>
+                <form id="alta" action="../php/procesar.php" method="post" enctype="multipart/form-data">
+                    <label for="tit">Titulo:</label>
+                    <input type="text" id="tit" name="titulo" required>
+                    <label for="gen">Genero:</label>
+                    <select name="genero" id="gen">
+                        <option value="terror">Terror</option>
+                        <option value="comedia">Comedia</option>
+                        <option value="accion">Acción</option>
+                        <option value="drama">Drama</option>
+                        <option value="romance">Romance</option>
+                        <option value="scifi">Ciencia Ficción</option>
+                        <option value="fantasia">Fantasia</option>
+                        <option value="-" selected>--Seleccione--</option>
+                    </select>
+                    <label for="fEst">Fecha de Estreno:</label>
+                    <input type="date" id="fEst" name="fechaEstreno" required>
+                    <div class="form__check">
+                        <label for="des">Destacado: </label>
+                        <input type="checkbox" id="des" name="destacado" value="Destacado">
+                    </div>
+                    <label for="img">Caratula: </label>
+                    <input type="file" name="imagen" accept="image/*" id="img">
+                    <div class="botones">
+                        <input class="boton" type="submit" value="Listo!">
+                        <input class="boton" type="reset" value="Borrar Todo">
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer class="page-footer font-small text-center bg-dark mt-5 p-2">
+    <a href="https://facetvirtual.facet.unt.edu.ar/course/view.php?id=185" style="text-decoration:none; color:white;">Laboratorio II - 2020</a>
+    </footer>
+
+
+    <!--SCRIPTS BOOTSTRAP-->
+    <script src="../js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+</body>
+
+</html>

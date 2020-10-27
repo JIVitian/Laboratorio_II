@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--MetaTags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jorge Iván, Vitian">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/login.css" type="text/css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+
+    <!--FavIcon-->
+    <link rel="shortcut icon" href="../img/estrella.png" type="image/x-icon">
+
+    <!--Titulo-->
+    <title>PiraPelis.com</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" style="color: white;">
+            <a class="navbar-brand" href="#">PiraPelis.com</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.php">Lista Peliculas<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../php/destacadas.php">Destacadas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formulario.html">Alta Pelicula</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="login.html">Ingresar</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <body>
+        <main>
+            <section>
+                <article>
+                    <div class="formulario">
+                        <form action="../php/procesarUser.php" method="POST">
+                            <legend>Inicie Sesión</legend>
+                            <input type="text" name="usuario" id="user" minlength="4" maxlength="40" autocomplete="off"
+                                placeholder="Usuario" required>
+                            <input type="password" name="password" id="pass" minlength="4" maxlength="25"
+                                autocomplete="off" placeholder="Contraseña" required>
+                            <input type="submit" value="Iniciar sesión" id="boton">
+                        </form>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <footer class="page-footer font-small text-center bg-dark mt-5 p-2">
+            <a href="https://facetvirtual.facet.unt.edu.ar/course/view.php?id=185"
+                style="text-decoration:none; color:white;">Laboratorio II - 2020</a>
+        </footer>
+
+
+        <!--SCRIPTS BOOTSTRAP-->
+        <script src="../js/jquery-3.5.1.slim.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/popper.min.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,81 @@
+.contenedor {
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: top;
+}
+
+.caratula {
+    max-width: 50%;
+}
+
+.caratula__img {
+    width: 100%;
+}
+
+.info {
+    width: 50%;
+}
+
+.star {
+    width: 3vw;
+}
+
+#alta {
+    width: 25vw;
+    height: 60vh;
+    padding: 2.5vw;
+    margin: 13.5vh auto 13.5vh auto;
+    border: thin solid #000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+}
+
+input, select {
+    width: 100%;
+    height: 1.5rem;
+    outline: none;
+}
+
+.form__check {
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+#des {
+    width: 1rem;
+    margin-left: 5%;
+    margin-bottom: 1.5%;
+}
+
+.botones {
+    width: 100%;
+    margin-top: 12.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.boton {
+    width: 40%;
+    height: 7.5vh;
+    border: thin solid red;
+    color: red;
+    background-color: white;
+    transition: 0.4s;
+    display: inline;
+}
+
+.boton:hover {
+    background-color: red;
+    color: white;
+    transition: 0.4s;
+}

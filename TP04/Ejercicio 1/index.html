@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jorge Iván Vitian">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Ejercicio 1 </title>
+</head>
+<body>
+    <header>
+        <h1>Calcular Descuento</h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <form action="php/descuento.php" method="POST">
+                    <label for="mont">Monto:</label>
+                    <input type="number" name="monto" id="mont" min="1" autocomplete="off" required>
+                    <label for="desc">Descuento:</label>
+                    <input type="number" name="descuento" id="desc" min="0" max="50" autocomplete="off" required>
+                    <input type="submit" value="Calcular">
+                </form>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
