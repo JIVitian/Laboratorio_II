@@ -1,11 +1,3 @@
-<!--
-    LABORATORIO II - TRABAJO PRACTICO 5 - Jorge Iván Vitian
-
-    Hice este trabajo probando el Framework BOOTSTRAP como complemento para mi CSS, tambien probé
-    algunas practicas que no se si son las mejores o no. Si ve que hay algo que se pueda
-    hacer de una manera mas eficiente o estilizada y/o use malas practicas agradecería que me lo avise.
--->
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,11 +7,11 @@
     <meta name="author" content="Jorge Iván, Vitian">
 
     <!--CSS-->
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
 
     <!--FavIcon-->
-    <link rel="shortcut icon" href="img/estrella.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/estrella.png" type="image/x-icon">
 
     <!--Titulo-->
     <title>PiraPelis.com</title>
@@ -35,17 +27,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.php">Lista Peliculas<span class="sr-only">(current)</span></a>
+                    </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Lista Peliculas<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Destacadas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="php/destacadas.php">Destacadas</a>
+                        <a class="nav-link" href="../html/formulario.html">Alta Pelicula</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="html/formulario.html">Alta Pelicula</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="html/login.html">Ingresar</a>
+                        <a class="nav-link" href="../html/login.html">Ingresar</a>
                     </li>
                 </ul>
             </div>
@@ -57,29 +49,27 @@
             <article class="container mt-5">
                 <?php
                 #Todas las funciones están dentro de funciones.php
-                include('php/funciones.php');
-                $file = leerTxt('txt/', 'peliculas.txt');
+                include('../php/funciones.php');
+                $file = leerTxt('../txt/', 'peliculas.txt');
 
                 #Compruebo que el archivo ingresado no este vacío
                 if (!empty($file)) {
                     #Muestro todo el contenido de la página desde aquí para que las funciones solo devuelvan valores
                     for ($i = 0 ; $i < sizeof($file) ; $i++){
-                        echo '<div class="row justify-content-center">
-                                <div class="contenedor col-sm-9 col-md-8 col-md-6">
-                                    <figure class="caratula col-sm-8 col-md-6 col-md-6">
-                                        <img src="img/caratulas/' . $file[$i][4] . '" alt="Caratula de la pelicula" class="caratula__img">
-                                    </figure>
-                                    <div class="info col-sm-4 col-md-6 col-lg-6">';
-                        
                         #Si es que la pelicula fue marcada como destacada se mostrará una estrella arriba del titulo.
                         if ($file[$i][3] == 'Destacado'){
-                            echo '<img src="img/estrella.png" alt="Pelicula Destacada" class="star">';
+                            echo '<div class="row justify-content-center">
+                                    <div class="contenedor col-sm-9 col-md-8 col-md-6">
+                                        <figure class="caratula col-sm-8 col-md-6 col-md-6">
+                                            <img src="../img/caratulas/' . $file[$i][4] . '" alt="Caratula de la pelicula" class="caratula__img">
+                                        </figure>
+                                        <div class="info col-sm-4 col-md-6 col-lg-6">';
+                                        
+                            echo '<h2>' . $file[$i][0] . '</h2>';
+                            echo '<p>Genero: ' . $file[$i][1] . '</p>';
+                            echo '<p>Fecha de estreno: ' . strftime('%d/%m/%Y', strtotime($file[$i][2])) . '</p></div>';
+                            echo '</div></div><hr>';
                         }
-                        
-                        echo '<h2>' . $file[$i][0] . '</h2>';
-                        echo '<p>Genero: ' . $file[$i][1] . '</p>';
-                        echo '<p>Fecha de estreno: ' . strftime('%d/%m/%Y', strtotime($file[$i][2])) . '</p></div>';
-                        echo '</div></div><hr>';
                     }
                 } else { #Si no hubiese nada en el archivo entonces se mostrará una 
                     echo '<h2>No hay peliculas cargadas</h2>

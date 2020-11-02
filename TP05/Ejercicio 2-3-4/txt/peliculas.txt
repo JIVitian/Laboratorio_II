@@ -1,3 +1,5 @@
-sadd;accion;2020-10-03;No;Logo-min.jpg
 Pollitos en fuga;comedia;2001-02-21;No;Pollitos en fuga.jpg
 Los Vengadores;accion;2013-09-21;Destacado;Vengadores.jpg
+Harry Potter y la Cámara de los Secretos;fantasia;2005-07-20;Destacado;Harry Potter y la Camara de los Secretos.jpg
+Corazón Valiente;accion;1995-08-23;Destacado;BRAVEHEART.jpg
+Cars;comedia;2005-07-21;No;Cars.jpg

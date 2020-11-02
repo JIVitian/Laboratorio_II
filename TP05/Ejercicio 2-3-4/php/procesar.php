@@ -38,9 +38,9 @@ if (!empty($_POST['titulo']) &&
     
     #Cierro el archivo y vuelvo a la página principal
     fclose($file);
-    header('refresh:0 ; url=../index.html');
+    header('refresh:0;url=../index.php');
 } else{
     echo '<h1>Datos Incorrectos</h1> <p>Se lo devolverá a la pagina principal.</p>';
-    header('refresh:3 ; url=../index.html');
+    header('refresh:3;url=../index.php');
 }
 ?>
