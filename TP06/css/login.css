@@ -1,0 +1,55 @@
+.formulario {
+    width: 25vw;
+    height: 55vh;
+    margin: 16vh auto 16vh auto;
+    background-color: lightgrey;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+form {
+    width: 20vw;
+    height: 45vh;
+    margin: auto auto;
+    background-color: white;
+    border: thin solid grey;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 2px 2px 1px 0 grey;
+}
+
+legend {
+    width: 90%;
+    margin-left: 10%;
+    font-weight: bolder;
+    color: red;
+    text-align: start;
+}
+
+input {
+    width: 90%;
+    height: 2.5em;
+    border-bottom: thin solid red;
+    /*Outline none para que no me aparezcan los
+    bordes al clickear en los campos de texto*/
+    outline: none;
+}
+
+#boton {
+    width: 50%;
+    height: 7.5vh;
+    border: thin solid red;
+    color: red;
+    background-color: white;
+    transition: 0.4s;
+}
+
+#boton:hover {
+    background-color: red;
+    color: white;
+    transition: 0.4s;
+}
