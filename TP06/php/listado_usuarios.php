@@ -1,31 +1,48 @@
 <?php
-if (!empty($_POST['usuario']) &&
-    !empty($_POST['password'])) {
-    
-    include ("conexion.php");
-    $conexion = conectar('peliculas');
-    
-    var_dump($_POST);
+include ("../html/headerInt.html");
+include ('menu.php');
+echo '</article>
+  <article class="php__article">';
 
-    $usuario = $_POST['usuario'];
-    $password = sha1($_POST['password']);
+include ('conexion.php');
 
-    $consulta = 'SELECT usuario, password
-                 FROM usuarios
-                 WHERE usuario = \'' . $usuario . '\' AND 
-                 password = \'' . $password . '\'';
+$conexion = conectar('peliculas');
+$query = 'SELECT * FROM usuarios';
+$request = mysqli_query($conexion, $query);
+$numFilas = mysqli_num_rows($request);
 
-    $resultado = mysqli_query($conexion, $consulta);
-
-    if (mysqli_num_rows($resultado) > 0) {
-        echo '<p>Este usuario existe</p>';
-    } else {
-        echo '<p>Este usuario no se encuentra registrado</p>';
-    }
-
-    desconectar($conexion);
+echo '<h2 class="lista__titulo">Lista de Usuarios Registrados</h2>
+<table class="lista__tabla">
+    <thead>
+        <tr class="lista__fila">
+            <th class="lista__col" scope="col">Usuario</th>
+            <th class="lista__col" scope="col">Mail</th>
+            <th class="lista__col" scope="col">Fecha_Alta</th>
+            <th class="lista__col" scope="col">Tipo</th>
+        </tr>
+    </thead>
+    <tbody>';
+if ($numFilas == 0){
+    echo '<tr class="lista__fila">
+        <td class="lista__celda">-</td>
+        <td class="lista__celda">-</td>
+        <td class="lista__celda">-</td>
+        <td class="lista__celda">-</td>
+    </tr>';
 } else {
-    echo '<p>Datos Incorrectos, intentelo de nuevo</p>';
-    header('refresh:3 ; url=../html/login.html');
+    while ($fila = mysqli_fetch_array($request)) {
+        $fecha = date_create($fila['fecha_alta']);
+        $fecha = date_format($fecha, 'd-m-Y');
+        echo '<tr class="lista__fila">
+            <td class="lista__celda">' . $fila['usuario'] . '</td>
+            <td class="lista__celda">' . $fila['mail'] . '</td>
+            <td class="lista__celda">' . $fecha . '</td>
+            <td class="lista__celda">' . $fila['tipo'] . '</td>
+        </tr>';
+    }
+    echo '</tbody>
+        </table>';
 }
+
+include ('../html/footerInt.html');
 ?>

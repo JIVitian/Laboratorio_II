@@ -2,39 +2,40 @@
 <html lang="es">
 
 <head>
-    <!--MetaTags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Jorge Iván, Vitian">
+  <!--MetaTags-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jorge Iván, Vitian">
 
-    <!--CSS-->
-    <link rel="stylesheet" href="../css/login.css" type="text/css">
+  <!--CSS-->
+  <link rel="stylesheet" href="css/login.css" type="text/css">
 
-    <!--FavIcon-->
-    <link rel="shortcut icon" href="../img/estrella.png" type="image/x-icon">
+  <!--FavIcon-->
+  <link rel="shortcut icon" href="img/estrella.png" type="image/x-icon">
 
-    <!--Titulo-->
-    <title>PiraPelis.com</title>
+  <!--Titulo-->
+  <title>PiraPelis.com</title>
 </head>
 
 <body>
-    <body>
-        <main>
-            <section>
-                <article>
-                    <div class="formulario">
-                        <form action="php/listado_usuarios.php" method="POST">
-                            <legend>Inicie Sesión</legend>
-                            <input type="text" name="usuario" id="user" minlength="4" maxlength="40" autocomplete="off"
-                                placeholder="Usuario" required>
-                            <input type="password" name="password" id="pass" minlength="4" maxlength="25"
-                                autocomplete="off" placeholder="Contraseña" required>
-                            <input type="submit" value="Iniciar sesión" id="boton">
-                        </form>
-                    </div>
-                </article>
-            </section>
-        </main>
-    </body>
+
+  <body>
+    <main>
+      <section>
+        <article>
+          <div class="formulario">
+            <form action="php/procesar_usuario.php" method="POST">
+              <legend>Inicie Sesión</legend>
+              <input type="text" name="usuario" id="user" minlength="4" maxlength="40" autocomplete="off"
+                placeholder="Usuario" required>
+              <input type="password" name="password" id="pass" minlength="4" maxlength="25" autocomplete="off"
+                placeholder="Contraseña" required>
+              <input type="submit" value="Iniciar sesión" id="boton">
+            </form>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
 
 </html>
