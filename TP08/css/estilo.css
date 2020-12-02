@@ -1,0 +1,264 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.php__header {
+    width: 100vw;
+    height: 10vh;
+    background-color: blue;
+}
+
+.php__h1 {
+    margin-left: 1vw;
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 0;
+}
+
+.session {
+    margin: auto;
+    width: 30vw;
+    padding-bottom: 5px;
+    border-bottom: medium solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: baseline;
+    font-size: 1.2rem;
+}
+
+.session__figure {
+    width: 2rem;
+    height: 5vh;
+    margin: 0;
+}
+
+.session__image {
+    max-width: 100%;
+}
+
+.session__name {
+    margin: 0 10px 0 10px;
+}
+
+.menu {
+    margin: auto auto;
+}
+
+.menu__article {
+    width: 30vw;
+}
+
+.menu__h2 {
+    text-align: left;
+    color: black;
+    margin-bottom: 0;
+}
+
+.menu__ul {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__config {
+    width: 100%;
+    height: 20vh;
+    padding: 0;
+}
+
+.menu__li {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu__boton {
+    width: 30vw;
+    padding: 0.5rem;
+    background-color: red;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.menu__boton:hover, .signup__boton:hover {
+    outline: thin solid black;
+    transition: 0.4s;
+}
+
+.php__main {
+    width: 100%;
+}
+
+.php__section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.php__article {
+    width: 60vw;
+}
+
+.lista__titulo {
+    text-align: center;
+}
+
+.lista__tabla {
+    border: thin solid red;
+    border-collapse: collapse;
+    margin: auto;
+    width: 95%;
+}
+
+.lista__col {
+    background-color: red;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.lista__celda {
+    border: thin solid red;
+    border-collapse: collapse;
+    padding: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.lista__imagen {
+    max-width: 1.75rem;
+}
+
+.signup__form {
+    width: 30vw;
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.signup__titulo {
+    width: 100%;
+    text-align: center;
+}
+
+.signup__label {
+    font-size: 1.2rem;
+    vertical-align: center;
+    margin: 5px 0 5px 0;
+}
+
+.signup__input {
+    width: 100%;
+    height: 1,4rem;
+    display: inline;
+    margin-left: auto;
+}
+
+.signup__boton {
+    width: 30vw;
+    display: block;
+    margin: auto auto;
+    margin: 5px 0 5px 0;
+    padding: 0,5rem;
+    color: white;
+    background-color: red;
+    font-size: 1.2rem;
+}
+
+.botonera {
+    width: 50%;
+    margin: auto auto;
+    text-align: center;
+}
+
+.confirmacion__boton {
+    width: 30%;
+    height: 7.5vh;
+    margin: 5px 0 5px 0;
+    padding: 0,5rem;
+    color: red;
+    background-color: white;
+    border: thin solid red;
+    font-size: 1.2rem;
+}
+
+.confirmacion__boton:hover {
+    color: white;
+    background-color: red;
+    border: thin solid black;
+    transition: 0.5s;
+}
+
+.parrafo__centrado {
+    width: 100%;
+    text-align: center;
+}
+
+.config__h2 {
+    text-align: center;
+    margin: 0;
+}
+
+.config__form {
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.config__label {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.config__check {
+    margin-right: 5px;
+}
+
+.config__figure {
+    width: 90%;
+}
+
+.config__image {
+    max-width: 100%;
+}
+
+.config__botonera {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer {
+    width: 100vw;
+    height: 5vh;
+    background-color: blue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__link {
+    padding: .4rem;
+}
